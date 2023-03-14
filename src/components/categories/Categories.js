@@ -24,7 +24,7 @@ const Categories = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}
-        className="p-4 md:p-8 mt-12 mb-12"
+        className=" mt-12 mb-12"
       >
         <motion.h1
           variants={textVariants}

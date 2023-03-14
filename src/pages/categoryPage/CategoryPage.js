@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
 import { BsCartPlus } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,16 +9,27 @@ import DottedLoading from "../../components/loading/Loading";
 import Wrapper from "../../components/wrapper/Wrapper";
 import { addTocart } from "../../redux/slices/cartSlice";
 import { addTowishlist } from "../../redux/slices/wishlistSlice";
-import { useGetSingleCategoryQuery } from "../../services/Api";
+import {
+  useGetSingleCategoryQuery,
+  useGetAllCategoriesQuery,
+} from "../../services/Api";
 import { discount } from "../../utils/helper";
 import { StaggerContainer, textVariants } from "../../utils/motion";
 import { truncate } from "../../utils/truncate";
 
 const CategoryPage = () => {
   const { id } = useParams();
+  const [category, setCategory] = useState(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { data, isLoading } = useGetSingleCategoryQuery(+id);
+  const { data: categories } = useGetAllCategoriesQuery();
+  useEffect(() => {
+    if (categories) {
+      const findCategory = categories?.find((item) => item.id === +id);
+      setCategory(findCategory);
+    }
+  }, [id, category]);
 
   // Add to wishlist
   const handleWishlist = (id) => {
@@ -43,6 +54,10 @@ const CategoryPage = () => {
           whileInView="show"
           viewport={{ once: false, amount: 0 }}
         >
+          <motion.h1 className="text-3xl text-gray-800 font-semibold mb-6 text-center">
+            Our {category?.name} Products
+          </motion.h1>
+
           <motion.div
             variants={textVariants}
             className="flex justify-center items-center gap-2 flex-wrap flex-grow"

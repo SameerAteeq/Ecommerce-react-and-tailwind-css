@@ -11,11 +11,11 @@ const ShowsAdd = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}
-        className="mb-12"
+        className="mb-12 overflow-hidden"
       >
         <motion.div
           variants={fadeIn("left", "tween", 0.4, 1.4)}
-          className="bg-gray-50"
+          className="bg-gray-50 w-full"
         >
           <div className="flex justify-center items-center gap-4 flex-wrap-reverse md:flex-nowrap h-full">
             <div className=" w-full md:w-1/2 p-3 h-64 md:h-full flex flex-col justify-center text-center capitalize">
@@ -38,7 +38,7 @@ const ShowsAdd = () => {
 
         <motion.div
           variants={fadeIn("right", "tween", 0.4, 1.4)}
-          className="bg-gray-50"
+          className="bg-gray-50 w-full"
         >
           <div className="flex justify-center items-center gap-4 flex-wrap md:flex-nowrap h-full">
             <div className="w-full md:w-1/2">

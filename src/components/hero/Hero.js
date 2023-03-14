@@ -34,7 +34,7 @@ const Hero = () => {
     }
   };
   return (
-    <section className=" h-full w-full  z-0">
+    <section className=" h-full z-0">
       <AliceCarousel
         className="h-full"
         disableButtonsControls
