@@ -3,14 +3,23 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 const items = [
-  <div className="h-[-70vh] w-full">
-    <img src="./assets/hero1.png " className="h-full w-full" />
+  <div className="h-full md:h-[85vh] w-full">
+    <img
+      src="./assets/hero1.png "
+      className="h-full w-full  object-cover  bg-cover bg-no-repeat "
+    />
   </div>,
-  <div className="h-[-70vh] w-full">
-    <img src="./assets/hero2.png" className="h-full w-full" />
+  <div className="h-full md:h-[85vh] w-full">
+    <img
+      src="./assets/hero2.png"
+      className="h-full w-full  object-cover  bg-cover bg-no-repeat "
+    />
   </div>,
-  <div className="h-[-70vh] w-full">
-    <img src="./assets/hero3.png" className="h-full w-full" />
+  <div className="h-full md:h-[85vh] w-full">
+    <img
+      src="./assets/hero3.png"
+      className="h-full w-full  object-cover  bg-cover bg-no-repeat "
+    />
   </div>,
 ];
 
@@ -25,11 +34,10 @@ const Hero = () => {
     }
   };
   return (
-    <section className="overflow-hidden box-border z-0">
+    <section className=" h-full w-full  z-0">
       <AliceCarousel
+        className="h-full"
         disableButtonsControls
-        autoPlay
-        autoPlayInterval={3000}
         onSlideChanged={handleOnSlideChanged}
         onSlideEnd={handleOnSlideEnd}
         items={items}

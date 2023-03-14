@@ -147,8 +147,9 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <hr />
-
+      </Wrapper>
+      <hr />
+      <Wrapper>
         {/* Categories Navbar */}
 
         <ul className=" hidden md:flex justify-between list-none p-4 md:p-4 ">
@@ -183,46 +184,46 @@ const Navbar = () => {
             Others
           </li>
         </ul>
-        <hr />
-        {/* For Small Devices */}
-
-        <ul
-          className={`${
-            showNavbar ? "translate-x-0" : "translate-x-[-300%] box-border"
-          }transition duration-700 flex justify-between flex-col gap-4 list-none p-4 md:p-8 absolute top-14 left-3 bg-white w-1/2 rounded-md shadow-lg border overflow-hidden`}
-        >
-          <li
-            className="text-sm font-bold text-gray-700 cursor-pointer"
-            onClick={() => navigate("category/1")}
-          >
-            Colthes
-          </li>
-          <li
-            className="text-sm font-bold text-gray-700 cursor-pointer"
-            onClick={() => navigate("category/2")}
-          >
-            Electronincs
-          </li>
-          <li
-            className="text-sm font-bold text-gray-700 cursor-pointer"
-            onClick={() => navigate("category/3")}
-          >
-            Furniture
-          </li>
-          <li
-            className="text-sm font-bold text-gray-700 cursor-pointer"
-            onClick={() => navigate("category/4")}
-          >
-            Shoes
-          </li>
-          <li
-            className="text-sm font-bold text-gray-700 cursor-pointer"
-            onClick={() => navigate("category/5")}
-          >
-            Others
-          </li>
-        </ul>
       </Wrapper>
+      <hr />
+      {/* For Small Devices */}
+
+      <ul
+        className={`${
+          showNavbar ? "translate-x-0" : "translate-x-[-300%] box-border"
+        }transition duration-700 flex justify-between flex-col gap-4 list-none p-4 md:p-8 absolute top-14 left-3 bg-white w-1/2 rounded-md shadow-lg border overflow-hidden`}
+      >
+        <li
+          className="text-sm font-bold text-gray-700 cursor-pointer"
+          onClick={() => navigate("category/1")}
+        >
+          Colthes
+        </li>
+        <li
+          className="text-sm font-bold text-gray-700 cursor-pointer"
+          onClick={() => navigate("category/2")}
+        >
+          Electronincs
+        </li>
+        <li
+          className="text-sm font-bold text-gray-700 cursor-pointer"
+          onClick={() => navigate("category/3")}
+        >
+          Furniture
+        </li>
+        <li
+          className="text-sm font-bold text-gray-700 cursor-pointer"
+          onClick={() => navigate("category/4")}
+        >
+          Shoes
+        </li>
+        <li
+          className="text-sm font-bold text-gray-700 cursor-pointer"
+          onClick={() => navigate("category/5")}
+        >
+          Others
+        </li>
+      </ul>
     </nav>
   );
 };

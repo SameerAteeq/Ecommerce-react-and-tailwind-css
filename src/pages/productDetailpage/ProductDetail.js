@@ -21,7 +21,7 @@ const ProductDetail = () => {
   };
   return (
     <>
-      <div className="p-2 md:p-6 ">
+      <div className="mb-6">
         <Wrapper>
           <div className="flex w-full h-full gap-4 flex-wrap md:flex-nowrap items-center ">
             <div className="w-full md:w-1/2 h-1/2 flex flex-col gap-2">
