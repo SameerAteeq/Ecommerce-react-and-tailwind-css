@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import DottedLoading from "../../components/loading/Loading";
+import Wrapper from "../../components/wrapper/Wrapper";
 import { addTocart } from "../../redux/slices/cartSlice";
 import { addTowishlist } from "../../redux/slices/wishlistSlice";
 import { useGetSingleCategoryQuery } from "../../services/Api";
