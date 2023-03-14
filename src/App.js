@@ -2,6 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import Wrapper from "./components/wrapper/Wrapper";
 import Login from "./pages/Auth/Login/Login";
 import Signup from "./pages/Auth/Signup/Signup";
 import CartPage from "./pages/cartPage/CartPage";
@@ -12,7 +13,7 @@ import WishlistPage from "./pages/wishlistPage/WishlistPage";
 
 function App() {
   return (
-    <div className="h-full">
+    <Wrapper>
       <Toaster />
       <BrowserRouter>
         <Navbar />
@@ -27,7 +28,7 @@ function App() {
           <Route path="*" element={<h1>404 Error</h1>} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </Wrapper>
   );
 }
 
