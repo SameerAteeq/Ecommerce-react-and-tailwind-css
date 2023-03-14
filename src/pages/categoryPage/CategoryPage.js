@@ -32,7 +32,7 @@ const CategoryPage = () => {
 
   if (isLoading) return <DottedLoading />;
   return (
-    <>
+    <Wrapper>
       <motion.div
         className="p-2 md:p-6"
         variants={StaggerContainer}
@@ -95,7 +95,7 @@ const CategoryPage = () => {
         </motion.div>
       </motion.div>
       <Footer />
-    </>
+    </Wrapper>
   );
 };
 

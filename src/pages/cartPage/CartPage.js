@@ -3,6 +3,7 @@ import { GrClose } from "react-icons/gr";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
+import Wrapper from "../../components/wrapper/Wrapper";
 import {
   addTocart,
   decreaseQuantity,
@@ -40,7 +41,7 @@ const CartPage = () => {
   };
 
   return (
-    <>
+    <Wrapper>
       <div className="p-2 md:p-6">
         <h1 className="text-4xl text-gray-800 font-bold text-center m-6">
           Your Cart
@@ -144,7 +145,7 @@ const CartPage = () => {
         )}
       </div>
       <Footer />
-    </>
+    </Wrapper>
   );
 };
 

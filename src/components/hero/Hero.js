@@ -3,13 +3,13 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 const items = [
-  <div className="h-1/2 w-full">
+  <div className="h-[-70vh] w-full">
     <img src="./assets/hero1.png " className="h-full w-full" />
   </div>,
-  <div className="h-1/2 w-full">
+  <div className="h-[-70vh] w-full">
     <img src="./assets/hero2.png" className="h-full w-full" />
   </div>,
-  <div className="h-1/2 w-full">
+  <div className="h-[-70vh] w-full">
     <img src="./assets/hero3.png" className="h-full w-full" />
   </div>,
 ];

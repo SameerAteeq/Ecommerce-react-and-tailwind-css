@@ -13,7 +13,7 @@ import WishlistPage from "./pages/wishlistPage/WishlistPage";
 
 function App() {
   return (
-    <Wrapper>
+    <div className="h-full">
       <Toaster />
       <BrowserRouter>
         <Navbar />
@@ -28,7 +28,7 @@ function App() {
           <Route path="*" element={<h1>404 Error</h1>} />
         </Routes>
       </BrowserRouter>
-    </Wrapper>
+    </div>
   );
 }
 

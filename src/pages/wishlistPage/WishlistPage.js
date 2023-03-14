@@ -9,6 +9,7 @@ import Footer from "../../components/footer/Footer";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { discount } from "../../utils/helper";
+import Wrapper from "../../components/wrapper/Wrapper";
 
 const WishlistPage = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const WishlistPage = () => {
   };
 
   return (
-    <div>
+    <Wrapper>
       <h1 className="text-4xl text-gray-800 font-bold text-center m-12">
         Your Wishlist
       </h1>
@@ -73,7 +74,7 @@ const WishlistPage = () => {
         )}
       </div>
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
 
